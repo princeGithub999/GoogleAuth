@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MenyPletForm">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/pletform_desine1">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:gravity="center"
+            android:text="Wellcome To My application"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="280dp"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/pletFromSignUp_Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="SignUp"
+            android:textStyle="bold"
+            app:icon="@drawable/img"
+            tools:ignore="HardcodedText"
+            android:textColorHint="@color/white"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/pletfromLogin_Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Login"
+            android:textStyle="bold"
+            app:icon="@drawable/img"
+            tools:ignore="HardcodedText"
+            android:textColorHint="@color/white"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="or"
+            android:gravity="center"
+            android:layout_marginTop="10dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/signInGoogle"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="70dp"
+                android:src="@drawable/img_1"
+                app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Full" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/signFeasbook"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="30dp"
+                android:src="@drawable/img_2"
+                app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Full" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/signGmail"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="30dp"
+                android:src="@drawable/img_3"
+                app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Full" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

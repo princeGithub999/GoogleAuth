@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Google Auth</string>
+    <string name="default_web_client_id">1091153234448-ci0ul6m0ij1vk2r48gmlu7ghoggr7a5g.apps.googleusercontent.com</string>
+    <string name="full_name">Email</string>
+    <string name="password">Password</string>
+    <string name="confrom_password">Confrom_Password</string>
+</resources>
