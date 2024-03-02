@@ -47,6 +47,21 @@
             android:layout_marginTop="10dp">
 
             <EditText
+                android:id="@+id/name_EditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:hint="Full Name"
+                tools:ignore="HardcodedText,RtlHardcoded,RtlSymmetry,TextFields"
+                android:autofillHints="" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <EditText
                 android:id="@+id/email_EditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -54,6 +69,19 @@
                 android:hint="@string/full_name"
                 tools:ignore="RtlHardcoded,RtlSymmetry,TextFields"
                 android:autofillHints="" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/number_EditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:hint="Number"
+                android:inputType="number"
+                tools:ignore="RtlHardcoded,RtlSymmetry" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -111,7 +139,8 @@
             android:layout_height="wrap_content"
             android:text="LogIn"
             android:textSize="12dp"
-            android:layout_marginLeft="5dp"/>
+            android:layout_marginLeft="5dp"
+            tools:ignore="HardcodedText,RtlHardcoded,SpUsage" />
     </LinearLayout>
 
 
@@ -120,7 +149,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/login_desine1"
-        android:layout_marginTop="140dp">
+        android:layout_marginTop="10dp">
 
     </RelativeLayout>
 </LinearLayout>

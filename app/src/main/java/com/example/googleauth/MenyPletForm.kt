@@ -37,9 +37,11 @@ class MenyPletForm : AppCompatActivity() {
 
         binding.pletFromSignUpButton.setOnClickListener {
             startActivity(Intent(this,SignUpActivity::class.java))
+            finish()
         }
         binding.pletfromLoginButton.setOnClickListener {
             startActivity(Intent(this,LoginActivity::class.java))
+            finish()
         }
 
 
@@ -70,9 +72,12 @@ class MenyPletForm : AppCompatActivity() {
             .addOnSuccessListener {
                 Toast.makeText(this, "Google auth success", Toast.LENGTH_SHORT).show()
                 startActivity(Intent(this,HomeActivity::class.java))
+                finish()
             }
             .addOnFailureListener {
                 Toast.makeText(this, "Google auth failed ${it.message}", Toast.LENGTH_SHORT).show()
             }
+
     }
+
 }
