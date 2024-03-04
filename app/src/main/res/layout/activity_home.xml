@@ -14,7 +14,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/dark"
-        app:menu="@menu/menu">
+        app:menu="@menu/menu"
+        app:title="Student">
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/logOutButton"
@@ -22,7 +23,8 @@
             android:layout_height="wrap_content"
             android:hint="LogOut"
             android:textColorHint="@color/dark"
-            tools:ignore="HardcodedText" />
+            tools:ignore="HardcodedText"
+            android:layout_marginLeft="90dp"/>
 
     </androidx.appcompat.widget.Toolbar>
 
@@ -47,6 +49,13 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <ProgressBar
+            android:id="@+id/prosesBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone"/>
+
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/addButton"
             android:layout_width="wrap_content"
@@ -57,26 +66,10 @@
             android:src="@drawable/baseline_add_24"
             tools:ignore="ContentDescription" />
 
-        <androidx.cardview.widget.CardView
+        <ListView
+            android:id="@+id/studentListView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <TextView
-                android:id="@+id/rollTextView"
-                android:layout_width="match_parent"
-                android:textColor="@color/dark"
-                android:text="hello"
-                android:layout_height="wrap_content"/>
-            <TextView
-                android:id="@+id/nameTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginTop="10dp"/>
-            <TextView
-                android:id="@+id/subjectTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginTop="30dp"/>
-        </androidx.cardview.widget.CardView>
+            android:layout_height="wrap_content" />
     </RelativeLayout>
 
 </LinearLayout>

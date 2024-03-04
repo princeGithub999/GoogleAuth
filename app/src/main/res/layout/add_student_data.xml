@@ -1,21 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    tools:context=".AddStudentDataActivity"
     android:orientation="vertical"
-    android:padding="20dp">
-
-<!--    <com.google.android.material.textfield.TextInputLayout-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content">-->
-
-<!--        <EditText-->
-<!--            android:id="@+id/rollNumber"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:hint="Roll_Number" />-->
-<!--    </com.google.android.material.textfield.TextInputLayout>-->
+    android:layout_margin="20dp">
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
@@ -26,7 +17,8 @@
             android:id="@+id/nameStudent_EditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Name" />
+            android:hint="Name"
+            tools:ignore="HardcodedText" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -38,7 +30,7 @@
             android:id="@+id/email_EditeText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Gender"
+            android:hint="Email"
             tools:ignore="HardcodedText" />
     </com.google.android.material.textfield.TextInputLayout>
 
