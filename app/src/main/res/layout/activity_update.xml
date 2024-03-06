@@ -4,39 +4,63 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="40dp"
     android:orientation="vertical"
     tools:context=".UpdateActivity">
 
 
-    <com.google.android.material.textfield.TextInputLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp">
+        android:layout_margin="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Update Data"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+        <ImageView
+            android:id="@+id/updateButton"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/check" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/updateImage"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_below="@+id/updateButton"
+            android:layout_marginTop="7dp"
+            android:src="@drawable/img_8"
+            app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Full" />
 
         <EditText
             android:id="@+id/updateName_EditText"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-    </com.google.android.material.textfield.TextInputLayout>
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/updateImage"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/list_view_desine"
+            android:padding="4dp"
+            tools:ignore="Autofill,LabelFor,TextFields" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp">
 
         <EditText
             android:id="@+id/updateGender_EditeText"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            tools:ignore="HardcodedText" />
-    </com.google.android.material.textfield.TextInputLayout>
+            android:layout_height="match_parent"
+            android:layout_below="@+id/updateName_EditText"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/list_view_desine"
+            android:gravity="start"
+            android:padding="4dp"
+            tools:ignore="Autofill,HardcodedText,LabelFor,NotSibling,TextFields" />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/updateButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:hint="Update" />
+
+    </RelativeLayout>
 
 </LinearLayout>

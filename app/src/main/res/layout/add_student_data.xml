@@ -1,45 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddStudentDataActivity"
     android:orientation="vertical"
-    android:layout_margin="20dp">
+    tools:context=".AddStudentDataActivity"
+    android:padding="20dp">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
+
+    <TextView
+        android:id="@+id/header_title"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp">
-
-        <EditText
-            android:id="@+id/nameStudent_EditText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Name"
-            tools:ignore="HardcodedText" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp">
-
-        <EditText
-            android:id="@+id/email_EditeText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Email"
-            tools:ignore="HardcodedText" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <androidx.appcompat.widget.AppCompatButton
+        android:text="Add Studnet"
+        tools:ignore="HardcodedText"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="@color/dark"/>
+    <ImageButton
         android:id="@+id/submit"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/check"/>
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/addImage"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:scaleType="centerCrop"
+        app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Full"
+        android:src="@drawable/img_8"
+        android:layout_below="@+id/submit"
+        android:layout_marginTop="5dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/submit"
+        android:text="Add Image"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="30dp"
+        android:textSize="18dp"
+        tools:ignore="HardcodedText" />
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header_title"
+        android:layout_alignParentEnd="true"
+        android:visibility="gone"/>
+
+    <EditText
+        android:id="@+id/nameStudent_EditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:hint="Add Data" />
+        android:layout_below="@+id/addImage"
+        android:hint="Name"
+        tools:ignore="Autofill,HardcodedText,TextFields"
+        android:background="@drawable/list_view_desine"
+        android:padding="7dp"
+        android:layout_marginTop="5dp"
+        android:singleLine="true"/>
+    <EditText
+        android:id="@+id/email_EditeText"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/nameStudent_EditText"
+        android:hint="Email"
+        android:gravity="start"
+        tools:ignore="Autofill,HardcodedText,TextFields"
+        android:background="@drawable/list_view_desine"
+        android:layout_marginTop="10dp"
+        android:padding="7dp"/>
 
-
-</LinearLayout>
+</RelativeLayout>

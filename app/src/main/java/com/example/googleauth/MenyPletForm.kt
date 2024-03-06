@@ -18,7 +18,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.GoogleAuthProvider
 
 class MenyPletForm : AppCompatActivity() {
-    lateinit var binding: ActivityMenyPletFormBinding
+    private lateinit var binding: ActivityMenyPletFormBinding
     private var auth = FirebaseAuth.getInstance()
 
     @SuppressLint("MissingInflatedId")
