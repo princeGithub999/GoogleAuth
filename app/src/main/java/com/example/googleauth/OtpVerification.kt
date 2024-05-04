@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import com.example.googleauth.HomeActivity
 import com.example.googleauth.databinding.ActivityOtpVerificationBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.PhoneAuthProvider
@@ -42,7 +43,7 @@ class OtpVerification : AppCompatActivity() {
        auth.signInWithCredential(phoneAuthCredential)
            .addOnSuccessListener {
                Toast.makeText(this, "SignUp success", Toast.LENGTH_SHORT).show()
-               startActivity(Intent(this,HomeActivity::class.java))
+               startActivity(Intent(this, HomeActivity::class.java))
                finish()
            }
            .addOnFailureListener {

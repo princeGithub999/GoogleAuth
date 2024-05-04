@@ -1,4 +1,4 @@
-package com.example.googleauth.ModleClass
+package com.example.googleauth.Adapter
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -10,11 +10,10 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import com.bumptech.glide.Glide
-import com.bumptech.glide.RequestBuilder
 import com.bumptech.glide.request.RequestOptions
+import com.example.googleauth.ModleClass.StudentModle
 import com.example.googleauth.R
 import com.google.android.material.imageview.ShapeableImageView
-import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.storage.FirebaseStorage
 
 

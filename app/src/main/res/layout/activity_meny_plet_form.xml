@@ -47,10 +47,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Login"
+            android:textColorHint="@color/white"
             android:textStyle="bold"
             app:icon="@drawable/img"
-            tools:ignore="HardcodedText"
-            android:textColorHint="@color/white"/>
+            tools:ignore="HardcodedText" />
 
         <TextView
             android:layout_width="match_parent"

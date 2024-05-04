@@ -5,6 +5,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import com.example.googleauth.HomeActivity
+import com.example.googleauth.LoginActivity
 import com.example.googleauth.databinding.ActivityHomeBinding
 import com.example.googleauth.databinding.ActivityMenyPletFormBinding
 import com.google.android.gms.auth.api.signin.GoogleSignIn
@@ -40,7 +42,7 @@ class MenyPletForm : AppCompatActivity() {
             finish()
         }
         binding.pletfromLoginButton.setOnClickListener {
-            startActivity(Intent(this,LoginActivity::class.java))
+            startActivity(Intent(this, LoginActivity::class.java))
             finish()
         }
 
@@ -71,7 +73,7 @@ class MenyPletForm : AppCompatActivity() {
         auth.signInWithCredential(credential)
             .addOnSuccessListener {
                 Toast.makeText(this, "Google auth success", Toast.LENGTH_SHORT).show()
-                startActivity(Intent(this,HomeActivity::class.java))
+                startActivity(Intent(this, HomeActivity::class.java))
                 finish()
             }
             .addOnFailureListener {

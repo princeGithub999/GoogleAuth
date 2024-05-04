@@ -4,10 +4,11 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import com.example.googleauth.ModleClass.StudentAdapter
+import com.example.googleauth.Adapter.StudentAdapter
 import com.example.googleauth.ModleClass.StudentModle
 import com.example.googleauth.databinding.ActivityHomeBinding
 import com.google.firebase.firestore.FirebaseFirestore
+import java.util.ArrayList
 
 
 class HomeActivity : AppCompatActivity(), StudentAdapter.SetOnStudentClcickLisner {
@@ -53,6 +54,7 @@ class HomeActivity : AppCompatActivity(), StudentAdapter.SetOnStudentClcickLisne
         intent.putExtra("id_key",list.id.toString())
         intent.putExtra("name_key",list.name.toString())
         intent.putExtra("email_key",list.email.toString())
+        intent.putExtra("image",list.image)
         startActivity(intent)
     }
     override fun onDeleteClcik(list: StudentModle) {
@@ -78,3 +80,4 @@ class HomeActivity : AppCompatActivity(), StudentAdapter.SetOnStudentClcickLisne
 
     }
 }
+

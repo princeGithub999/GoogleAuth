@@ -44,7 +44,7 @@ class SignUpActivity : AppCompatActivity() {
 
 
         binding.alreadyLoginTextView.setOnClickListener {
-            startActivity(Intent(this, LoginActivity::class.java))
+            startActivity(Intent(this,LoginActivity::class.java))
         }
 
     }
@@ -65,8 +65,6 @@ class SignUpActivity : AppCompatActivity() {
         auth.createUserWithEmailAndPassword(email, pass).addOnCompleteListener(this) {
             if (it.isSuccessful) {
                 Toast.makeText(this, "Successfully Singed Up", Toast.LENGTH_SHORT).show()
-
-
 
             } else {
                 Toast.makeText(this, "fled SignUp ", Toast.LENGTH_SHORT).show()

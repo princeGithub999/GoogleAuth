@@ -1,23 +1,14 @@
 package com.example.googleauth
 
-import android.annotation.SuppressLint
-import android.app.Activity
 import android.app.ProgressDialog
 import android.content.Intent
-import android.content.pm.PackageManager
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import android.widget.Toast
-import androidx.activity.result.contract.ActivityResultContracts
-import androidx.core.app.ActivityCompat
 import com.example.googleauth.databinding.AddStudentDataBinding
-import com.google.firebase.Firebase
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.storage.FirebaseStorage
-import com.google.firebase.storage.storage
-import com.squareup.picasso.Picasso
 import java.util.UUID
 
 class AddStudentDataActivity : AppCompatActivity() {
@@ -70,7 +61,7 @@ class AddStudentDataActivity : AppCompatActivity() {
                         .addOnSuccessListener {
                             progressBar.dismiss()
                             Toast.makeText(this, "User Add", Toast.LENGTH_SHORT).show()
-                            startActivity(Intent(this, HomeActivity::class.java))
+                            startActivity(Intent(this, HomeActivity::class::class.java))
                             finish()
                         }
                         .addOnFailureListener {
@@ -96,7 +87,7 @@ class AddStudentDataActivity : AppCompatActivity() {
             try {
                 uri = imageUri
                 binding.addImage.setImageURI(imageUri)
-                UplodeImage()
+              UplodeImage()
             } catch (e: Exception) {
                 e.printStackTrace()
             }

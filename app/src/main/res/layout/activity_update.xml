@@ -22,10 +22,10 @@
             android:textStyle="bold"
             tools:ignore="HardcodedText" />
 
-        <ImageView
+        <ImageButton
             android:id="@+id/updateButton"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:layout_alignParentEnd="true"
             android:src="@drawable/check" />
 
@@ -36,6 +36,7 @@
             android:layout_below="@+id/updateButton"
             android:layout_marginTop="7dp"
             android:src="@drawable/img_8"
+            android:scaleType="centerCrop"
             app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Full" />
 
         <EditText
